@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renata Xavier Serrano - Terapeuta Integrativa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8e7cc3;
+            --secondary-color: #a2c4c9;
+            --accent-color: #e6b8af;
+            --light-color: #f8f5f0;
+            --dark-color: #5d4037;
+            --text-color: #4a4a4a;
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', 'Segoe UI', sans-serif;
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e6b8af' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        /* Lotus styling */
+        .lotus-icon {
+            width: 32px;
+            height: 32px;
+            margin: 0 10px;
+            fill: var(--primary-color);
+            opacity: 0.9;
+            transition: var(--transition);
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .logo:hover .lotus-icon {
+            transform: rotate(15deg);
+        }
+        
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-left: 12px;
+            letter-spacing: 0.5px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 35px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            font-size: 1.05rem;
+            padding: 5px 0;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        /* Main sections */
+        section {
+            padding: 120px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+        
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.8;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+        
+        /* Hero section */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            background: linear-gradient(rgba(248, 245, 240, 0.9), rgba(248, 245, 240, 0.7)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><path d="M100,50 C120,30 150,40 150,70 C150,100 120,120 100,150 C80,120 50,100 50,70 C50,40 80,30 100,50 Z" fill="none" stroke="%238e7cc3" stroke-width="1" opacity="0.1"/></svg>');
+            background-size: 300px;
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(142,124,195,0.1) 0%, rgba(248,245,240,0) 70%);
+            z-index: -1;
+        }
+        
+        .profile-image {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+            border: 5px solid white;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+        
+        .profile-image::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 2px solid white;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .profile-image i {
+            font-size: 8rem;
+            color: rgba(255,255,255,0.85);
+            transition: var(--transition);
+        }
+        
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 500;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+        
+        .hero-content h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+        }
+        
+        .qualifications {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            gap: 15px;
+        }
+        
+        .qualification {
+            background: white;
+            padding: 12px 25px;
+            margin: 5px;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            font-weight: 500;
+            color: var(--primary-color);
+            transition: var(--transition);
+            cursor: default;
+        }
+        
+        .qualification:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+        
+        .hero-content p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 40px;
+            box-shadow: 0 5px 20px rgba(142, 124, 195, 0.3);
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(142, 124, 195, 0.4);
+        }
+        
+        /* Services section */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+        
+        .service-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 30px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+        }
+        
+        .service-header h3 {
+            font-size: 1.7rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .service-body {
+            padding: 30px;
+        }
+        
+        .price {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 15px 0;
+            display: block;
+        }
+        
+        .package {
+            background: rgba(142, 124, 195, 0.1);
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 30px;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .package {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .service-description {
+            color: var(--text-color);
+            margin: 20px 0;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        
+        /* Facial section */
+        #facial {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 25px;
+            margin: 60px auto;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #facial::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(142,124,195,0.1) 0%, rgba(255,255,255,0) 70%);
+            z-index: -1;
+        }
+        
+        /* Testimonials section */
+        #testimonials {
+            background: linear-gradient(135deg, rgba(248,245,240,0.9), rgba(255,255,255,0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><path d="M100,50 C120,30 150,40 150,70 C150,100 120,120 100,150 C80,120 50,100 50,70 C50,40 80,30 100,50 Z" fill="none" stroke="%238e7cc3" stroke-width="1" opacity="0.05"/></svg>');
+            background-size: 400px;
+            border-radius: 25px;
+            margin: 60px auto;
+            box-shadow: var(--shadow);
+        }
+        
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-card::before {
+            content: """;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            color: rgba(142, 124, 195, 0.1);
+            line-height: 1;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .author-info h4 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--dark-color), #3e2723);
+            color: white;
+            padding: 80px 20px 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></svg>');
+            opacity: 0.2;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 50px;
+        }
+        
+        .contact-info {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            transition: var(--transition);
+        }
+        
+        .contact-info:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .contact-info h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--accent-color);
+        }
+        
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.7);
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 35px;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        /* Responsive design */
+        @media (max-width: 992px) {
+            .header-container {
+                padding: 15px;
+            }
+            
+            nav ul li {
+                margin-left: 20px;
+            }
+            
+            .hero-content h1 {
+                font-size: 3.2rem;
+            }
+            
+            .hero-content h2 {
+                font-size: 1.7rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.4rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .menu-toggle {
+                display: block;
+                font-size: 1.8rem;
+                color: var(--primary-color);
+                cursor: pointer;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .profile-image {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .profile-image i {
+                font-size: 6rem;
+            }
+            
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            section {
+                padding: 80px 20px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.4rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title p {
+                font-size: 1.1rem;
+            }
+            
+            .qualification {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Floating elements */
+        .floating-element {
+            position: absolute;
+            z-index: -1;
+            opacity: 0.1;
+        }
+        
+        .floating-1 {
+            top: 20%;
+            left: 10%;
+            font-size: 4rem;
+            color: var(--primary-color);
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .floating-2 {
+            top: 40%;
+            right: 15%;
+            font-size: 3rem;
+            color: var(--accent-color);
+            animation: float 10s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+        
+        .floating-3 {
+            bottom: 20%;
+            left: 20%;
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            animation: float 9s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5514996743131" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Floating decorative elements -->
+    <div class="floating-element floating-1">
+        <i class="fas fa-spa"></i>
+    </div>
+    <div class="floating-element floating-2">
+        <i class="fas fa-leaf"></i>
+    </div>
+    <div class="floating-element floating-3">
+        <i class="fas fa-hand-holding-heart"></i>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <svg class="lotus-icon" viewBox="0 0 24 24">
+                    <path d="M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10S17.5,2,12,2z M12,20c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8S16.4,20,12,20z M15,11c0,1.7-1.3,3-3,3s-3-1.3-3-3s1.3-3,3-3S15,9.3,15,11z"/>
+                </svg>
+                <h1>Renata Xavier Serrano</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#facial">Estética Facial</a></li>
+                    <li><a href="#testimonials">Depoimentos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="profile-image floating">
+            <i class="fas fa-spa"></i>
+        </div>
+        <div class="hero-content">
+            <h1>Renata Xavier Serrano</h1>
+            <h2>Terapeuta Integrativa</h2>
+            
+            <div class="qualifications">
+                <div class="qualification">Técnica em Radiologia Médica</div>
+                <div class="qualification">Massagista Terapeuta</div>
+                <div class="qualification">Facilitadora de Barras de Access</div>
+                <div class="qualification">Discente em Biomedicina</div>
+            </div>
+            
+            <p>Bem-vindo(a) ao meu espaço de cura e equilíbrio. Ofereço terapias integrativas que harmonizam corpo, mente e espírito, utilizando técnicas que promovem bem-estar e paz interior.</p>
+            
+            <a href="#contact" class="cta-button">Entre em Contato</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="section-title">
+            <h2>Serviços Terapêuticos</h2>
+            <p>Descubra as terapias que ofereço para seu bem-estar integral</p>
+        </div>
+        
+        <div class="services-container">
+            <!-- Terapia + Barras de Access -->
+            <div class="service-card">
+                <div class="service-header">
+                    <h3>Terapia + Barras de Access</h3>
+                </div>
+                <div class="service-body">
+                    <span class="price">R$ 120,00</span>
+                    <span class="package">Pacote 10 sessões: R$ 900,00</span>
+                    <p class="service-description">Combinação poderosa de técnicas terapêuticas com as Barras de Access para liberação de padrões mentais e emocionais limitantes.</p>
+                </div>
+            </div>
+            
+            <!-- Barras de Access -->
+            <div class="service-card">
+                <div class="service-header">
+                    <h3>Barras de Access</h3>
+                </div>
+                <div class="service-body">
+                    <span class="price">R$ 100,00</span>
+                    <span class="package">Pacote 10 sessões: R$ 700,00</span>
+                    <p class="service-description">Técnica energética que trabalha em 32 pontos da cabeça para liberar pensamentos, crenças e emoções que limitam sua vida.</p>
+                </div>
+            </div>
+            
+            <!-- Massagem Relaxante -->
+            <div class="service-card">
+                <div class="service-header">
+                    <h3>Massagem Relaxante</h3>
+                </div>
+                <div class="service-body">
+                    <span class="price">R$ 90,00</span>
+                    <span class="package">Pacote 10 sessões: R$ 600,00</span>
+                    <p class="service-description">Massagem suave e profunda que alivia tensões musculares, reduz o estresse e promove relaxamento profundo.</p>
+                </div>
+            </div>
+            
+            <!-- Massagem Terapêutica -->
+            <div class="service-card">
+                <div class="service-header">
+                    <h3>Massagem Terapêutica</h3>
+                </div>
+                <div class="service-body">
+                    <span class="price">R$ 100,00</span>
+                    <span class="package">Pacote 10 sessões: R$ 700,00</span>
+                    <p class="service-description">Técnica focada no tratamento de dores musculares e problemas posturais, com abordagem terapêutica específica.</p>
+                </div>
+            </div>
+            
+            <!-- Massagem Desportiva -->
+            <div class="service-card">
+                <div class="service-header">
+                    <h3>Massagem Desportiva</h3>
+                </div>
+                <div class="service-body">
+                    <span class="price">R$ 90,00</span>
+                    <span class="package">Pacote 10 sessões: R$ 600,00</span>
+                    <p class="service-description">Massagem especializada para atletas, focada na prevenção de lesões, recuperação muscular e melhora de performance.</p>
+                </div>
+            </div>
+            
+            <!-- Drenagem Linfática -->
+            <div class="service-card">
+                <div class="service-header">
+                    <h3>Drenagem Linfática</h3>
+                </div>
+                <div class="service-body">
+                    <span class="price">R$ 100,00</span>
+                    <span class="package">Pacote 10 sessões: R$ 700,00</span>
+                    <p class="service-description">Técnica manual que estimula o sistema linfático, reduzindo inchaços, melhorando a circulação e eliminando toxinas.</p>
+                </div>
+            </div>
+            
+            <!-- Sessão Completa -->
+            <div class="service-card">
+                <div class="service-header">
+                    <h3>Sessão Premium</h3>
+                </div>
+                <div class="service-body">
+                    <span class="price">R$ 150,00</span>
+                    <span class="package">Pacote 10 sessões: R$ 900,00</span>
+                    <p class="service-description">Sessão completa com Massagem + Vibrotetapia + Aromaterapia + Pastilhas de IVL e Ímãs para uma experiência de bem-estar total.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facial Section -->
+    <section id="facial">
+        <div class="section-title">
+            <h2>Estética Facial</h2>
+            <p>Tratamentos especializados para a saúde e beleza da sua pele</p>
+        </div>
+        
+        <div class="services-container">
+            <!-- Limpeza de Pele -->
+            <div class="service-card">
+                <div class="service-header">
+                    <h3>Limpeza de Pele</h3>
+                </div>
+                <div class="service-body">
+                    <span class="price">R$ 120,00</span>
+                    <p class="service-description">Limpeza profunda completa com Fototerapia para renovação celular, remoção de impurezas e tratamento de acne.</p>
+                </div>
+            </div>
+            
+            <!-- Peeling -->
+            <div class="service-card">
+                <div class="service-header">
+                    <h3>Peeling</h3>
+                </div>
+                <div class="service-body">
+                    <p class="service-description">Tratamento personalizado para renovação celular, suavização de rugas e manchas. O protocolo é definido após avaliação da pele.</p>
+                    <p class="package">Valor sob avaliação</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="section-title">
+            <h2>Depoimentos</h2>
+            <p>O que meus clientes dizem sobre as terapias</p>
+        </div>
+        
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"As sessões com Renata transformaram minha vida. Depois de 10 sessões de Barras de Access, minha ansiedade diminuiu significativamente e consegui encontrar clareza em minhas decisões profissionais."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">M</div>
+                    <div class="author-info">
+                        <h4>Mariana S.</h4>
+                        <p>Cliente há 2 anos</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <p class="testimonial-text">"A limpeza de pele que fiz com Renata foi incrível! Minha pele nunca esteve tão saudável. Ela explica cada passo do procedimento e os cuidados pós-tratamento. Profissionalismo total!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">A</div>
+                    <div class="author-info">
+                        <h4>Amanda T.</h4>
+                        <p>Cliente há 6 meses</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <p class="testimonial-text">"A sessão premium é uma experiência transformadora. A combinação de técnicas me levou a um estado de relaxamento profundo que nunca tinha experimentado antes. Recomendo muito!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">L</div>
+                    <div class="author-info">
+                        <h4>Luciana F.</h4>
+                        <p>Cliente há 1 ano</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Informações de Contato</h3>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contato@renataterapias.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(14) 99674-3131</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Cafelândia, São Paulo</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Seg-Sex: 9h às 19h | Sáb: 9h às 14h</span>
+                    </div>
+                </div>
+       
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Renata Xavier Serrano - Terapeuta Integrativa. Todos os direitos reservados.</p>
+            <p>Design Lótus</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+                header.style.background = 'rgba(255,255,255,0.98)';
+            } else {
+                header.style.boxShadow = '0 2px 15px rgba(0,0,0,0.05)';
+                header.style.background = 'rgba(255,255,255,0.95)';
+            }
+        });
+        
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav ul');
+        
+        menuToggle.addEventListener('click', function() {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+            menuToggle.innerHTML = nav.style.display === 'flex' ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    nav.style.display = 'none';
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+        
+        // Animation on scroll
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.service-card, .testimonial-card, .contact-info');
+            elements.forEach(el => {
+                const position = el.getBoundingClientRect();
+                
+                // If element is in viewport
+                if(position.top < window.innerHeight - 100 && position.bottom >= 0) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        
+        // Initialize elements for animation
+        document.querySelectorAll('.service-card, .testimonial-card, .contact-info').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+        
+        // Floating elements animation
+        const floatingElements = document.querySelectorAll('.floating-element');
+        floatingElements.forEach(el => {
+            el.style.opacity = '0';
+            setTimeout(() => {
+                el.style.opacity = '0.1';
+                el.style.transition = 'opacity 1.5s ease';
+            }, 500);
+        });
+    </script>
+</body>
+</html>
